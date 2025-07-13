@@ -9,7 +9,8 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "testCase02": "wdio run wdio.conf.ts --spec ./test/specs/products.spec.ts" 
+    "testCase02": "wdio run wdio.conf.ts --spec ./test/specs/products.spec.ts",
+    "testCase03": "wdio run wdio.conf.ts --spec ./test/specs/cart.spec.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0"
