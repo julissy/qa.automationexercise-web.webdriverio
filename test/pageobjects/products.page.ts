@@ -23,16 +23,12 @@ export class ProductsPage {
     async productsSearchedisVisible() {
         const listProducts = await $$(element.listProducts);
         if (await listProducts.length === 0) {
-            throw new Error('No products found')
+            throw new Error('No products found');
         }
 
         for (const nameProduct of listProducts) {
             const titleProduct = ((await nameProduct.getText()).toLowerCase());
-            console.log(`${titleProduct}`);
-            expect(titleProduct).toContain(productData.productName);
-            await browser.pause(3000);
-            console.log(`${titleProduct.length}`)
-        }
-    }
-
+            expect(titleProduct).toContain(productData.productName);       
+        };
+    };
 };
