@@ -1,0 +1,23 @@
+export const element = {
+    title: 'label[for="id_gender1"]',
+    name: 'input[data-qa="name"]',
+    email: 'input[data-qa="email"]',
+    password: 'input[data-qa="password"]',
+    dayBirth: 'select[data-qa="days"]',
+    monthBirth: 'select[data-qa="months"]',
+    yearBirth: 'select[data-qa="years"',
+    checkboxNewsletter: '#newsletter',
+    checkboxSpecialOffers: '#optin',
+    firstName: 'input[data-qa="first_name"]',
+    lastName: 'input[data-qa="last_name"]',
+    company: 'input[data-qa="company"]',
+    address: 'input[data-qa="address"]',
+    address2: 'input[data-qa="address2"]',
+    country: 'select[data-qa="country"]',
+    state: 'input[data-qa="state"]',
+    city: 'input[data-qa="city"]',
+    zipcode: 'input[data-qa="zipcode"]',
+    phone: 'input[data-qa="mobile_number"]',
+    btnCreateAccount: 'button[data-qa="create-account"]',
+
+}
