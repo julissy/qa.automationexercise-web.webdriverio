@@ -1,5 +1,6 @@
 import { $ } from '@wdio/globals';
 import { element } from '../elements/products.elements';
+import { productData} from '../../data/productItem';
 
 
 export class ProductsPage {
@@ -8,7 +9,7 @@ export class ProductsPage {
         const fieldSearch = $(element.fieldSearch);
         const btnSearch = $(element.btnSearch);
         await expect(fieldSearch).toBeDisplayed();
-        await fieldSearch.setValue('dress');
+        await fieldSearch.setValue(productData.productName);
         await expect(btnSearch).toBeDisplayed();
         await btnSearch.click();
         
@@ -18,5 +19,20 @@ export class ProductsPage {
         await expect($(element.titleProducts)).toHaveText('SEARCHED PRODUCTS');
         
     };
+
+    async productsSearchedisVisible() {
+        const listProducts = await $$(element.listProducts);
+        if (await listProducts.length === 0) {
+            throw new Error('No products found')
+        }
+
+        for (const nameProduct of listProducts) {
+            const titleProduct = ((await nameProduct.getText()).toLowerCase());
+            console.log(`${titleProduct}`);
+            expect(titleProduct).toContain(productData.productName);
+            await browser.pause(3000);
+            console.log(`${titleProduct.length}`)
+        }
+    }
 
 };

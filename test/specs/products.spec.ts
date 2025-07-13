@@ -20,4 +20,8 @@ describe('Test Case 2: Search Product', () => {
     it('Check if "SEARCHED PRODUCTS" is visible', async () => {
         await productsPage.titleSearchedProductisVisible();
     })
+
+    it('Check that all products related to the search are visible', async () => {
+        await productsPage.productsSearchedisVisible();
+    })
 })
