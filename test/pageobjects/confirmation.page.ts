@@ -1,5 +1,5 @@
-import { $ } from '@wdio/globals'
-import { element } from '../elements/confirmation.page';
+import { $ } from '@wdio/globals';
+import { element } from '../elements/confirmation.elements';
 
 export class ConfirmationPage {
 
@@ -12,7 +12,7 @@ export class ConfirmationPage {
 
     async titleAccountDeleteisVisible() {
         await expect($(element.titleDeletedAccount)).toBeDisplayed();
-        await expect($(element.titleDeletedAccount)).toHaveText('ACCOUNT DELETED!')
+        await expect($(element.titleDeletedAccount)).toHaveText('ACCOUNT DELETED!');
         
     }
 }

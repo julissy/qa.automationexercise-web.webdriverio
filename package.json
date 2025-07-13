@@ -8,7 +8,8 @@
     "@wdio/spec-reporter": "^9.17.0"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.ts"
+    "wdio": "wdio run ./wdio.conf.ts",
+    "testCase02": "wdio run wdio.conf.ts --spec ./test/specs/products.spec.ts" 
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0"

@@ -22,4 +22,11 @@ export class Home {
         await btnDelete.click();
         
     }
+
+    async products() {
+        const btnProducts = $(element.btnProducts);
+        await expect(btnProducts).toBeDisplayed();
+        await btnProducts.click();
+        await browser.pause(3000);
+    }
 }
