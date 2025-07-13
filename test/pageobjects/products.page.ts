@@ -13,7 +13,7 @@ export class ProductsPage {
         await expect(btnSearch).toBeDisplayed();
         await btnSearch.click();
         
-    }
+    };
 
     async titleSearchedProductisVisible() {
         await expect($(element.titleProducts)).toHaveText('SEARCHED PRODUCTS');
@@ -30,5 +30,36 @@ export class ProductsPage {
             const titleProduct = ((await nameProduct.getText()).toLowerCase());
             expect(titleProduct).toContain(productData.productName);       
         };
+    
     };
+
+    async clickViewProduct() {
+        const btnViewProduct = $(element.btnViewProduct);
+        await expect(btnViewProduct).toBeDisplayed();
+        await btnViewProduct.click();
+        
+    }
+
+    async increaseQuantityTo4() {
+       const inputQuantity = $(element.inputQuantity);
+       await inputQuantity.clearValue();
+       await inputQuantity.setValue('4');
+       await expect(inputQuantity).toHaveValue('4');
+       
+    };
+
+    async clickAddCart() {
+        const btnAddCart = $(element.btnAddCart);
+        await expect(btnAddCart).toBeDisplayed();
+        await btnAddCart.click();
+
+    };
+
+    async clickViewCart() {
+        const btnViewCart = $(element.btnViewCart);
+        await expect(btnViewCart).toBeDisplayed();
+        await btnViewCart.click();
+        await browser.pause(3000);
+    };
+
 };
