@@ -8,7 +8,7 @@ const registerPage = new RegisterPage();
 import { ConfirmationPage } from '../pageobjects/confirmation.page';
 const confirmationPage = new ConfirmationPage()
 
-describe('Test Case 1: Register User', () => {
+describe('Test Case 01: Register User', () => {
 
     before(async () => {
         homePage.open('/');
