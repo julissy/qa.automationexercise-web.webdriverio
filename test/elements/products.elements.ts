@@ -9,7 +9,6 @@ export const element = {
     btnViewCart: '//u[normalize-space()="View Cart"]',
     titleProductDetail: 'div[class="product-information"] h2',
     listProductsIndex: '.product-image-wrapper',
-    btnAddCart2: '.add-to-cart',
     btnContinueShopping: '.btn.btn-success.close-modal.btn-block',
     
 };

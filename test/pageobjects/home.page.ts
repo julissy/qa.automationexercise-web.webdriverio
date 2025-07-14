@@ -8,25 +8,32 @@ export class Home {
     */
     open (path: string) {
         return browser.url(`https://automationexercise.com${path}`);
-    }
+    };
 
     async signUp() {
         const btnSignUp = await $(element.btnSignup);
         await expect(btnSignUp).toBeDisplayed();
         await btnSignUp.click();
-    }
+    };
     
     async deleteAccount() {
         const btnDelete = $(element.btnDelete);
         await expect(btnDelete).toBeDisplayed();
         await btnDelete.click();
         
-    }
+    };
 
     async products() {
         const btnProducts = $(element.btnProducts);
         await expect(btnProducts).toBeDisplayed();
         await btnProducts.click();
-        await browser.pause(3000);
-    }
-}
+        
+    };
+
+    async cart() {
+        const btnCart = $(element.btnCart);
+        await expect(btnCart).toBeDisplayed();
+        await btnCart.click();
+        
+    };
+};

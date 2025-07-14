@@ -10,8 +10,7 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "testCase02": "wdio run wdio.conf.ts --spec ./test/specs/products.spec.ts",
-    "testCase03": "wdio run wdio.conf.ts --spec ./test/specs/cart.spec.ts",
+    "test": "wdio run wdio.conf.ts --spec ./test/specs/cart.spec.ts",
     "allure:clear": "rm -r allure-results/ allure-report || true",
     "allure:report": "allure generate --clean allure-results && allure open",
     "allure:generate": "allure generate allure-results",
