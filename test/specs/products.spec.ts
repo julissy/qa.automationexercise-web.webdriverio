@@ -4,7 +4,7 @@ import { ProductsPage } from '../pageobjects/products.page';
 const productsPage = new ProductsPage();
 
 
-describe('Test Case 2: Search Product', () => {
+describe('Test Case 02: Search Product', () => {
 
     before(async () => {
         homePage.open('/');
