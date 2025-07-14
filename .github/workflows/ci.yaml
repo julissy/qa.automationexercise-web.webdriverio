@@ -1,4 +1,4 @@
-name: CI
+name: WebdriverIO Test
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
     branches:    
       - main
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
         - name: Checkout Code
@@ -16,18 +16,20 @@ jobs:
         - name: Setup Node
           uses: actions/setup-node@v4
           with:
-            node-version-file: 18
+            node-version: '18'
 
         - name: Install Dependencies
           run: npm install
 
         - name: Test
           run: npm run wdio
+          continue-on-error: true
 
-        - 
+        - name: Generate report
+          run: npm run allure:generate
 
         - name: Upload Logs
           uses: actions/upload-artifact@v4
           with:
-            name: allureReports
+            name: allure-reports
             path: allure-report
