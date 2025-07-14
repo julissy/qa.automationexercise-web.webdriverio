@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - testCase04
   pull_request:
     branches:    
       - main
