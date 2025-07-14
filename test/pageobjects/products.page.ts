@@ -59,7 +59,25 @@ export class ProductsPage {
         const btnViewCart = $(element.btnViewCart);
         await expect(btnViewCart).toBeDisplayed();
         await btnViewCart.click();
-        await browser.pause(3000);
+        
     };
 
+    async hoverOverProductAndClick(productIndex: number) {
+        const products = await $$(element.listProductsIndex);
+        const product = products[productIndex - 1];
+        const btnAddCart = await product.$(element.btnAddCart2);
+
+        await product.scrollIntoView();
+        await product.moveTo();
+        await btnAddCart.waitForClickable({ timeout: 5000 });
+        await btnAddCart.click();
+           
+    };
+
+    async clickContinueShopping() {
+        const btnContinueShopping = $(element.btnContinueShopping);
+        await expect(btnContinueShopping).toBeDisplayed();
+        await btnContinueShopping.click();
+        
+    };  
 };
