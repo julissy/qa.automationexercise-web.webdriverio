@@ -23,7 +23,6 @@ jobs:
 
         - name: Test
           run: npm run wdio
-          continue-on-error: true
 
         - name: Generate report
           run: npm run allure:generate
