@@ -1,5 +1,4 @@
 import { $ } from '@wdio/globals';
-import { element } from '../elements/products.elements';
 import { elements } from '../elements/cart.elements';
 
 export class CartPage {
@@ -15,5 +14,12 @@ export class CartPage {
 
         await expect(btnDelete).toBeDisplayed();
         await btnDelete.click();
-    }
-}
+        
+    };
+
+    async productIsRemoved(productIndex: number) {
+        const productName = $(`a[href="/product_details/${productIndex}"]`);
+
+        await expect(productName).not.toBeDisplayed();
+    };
+};

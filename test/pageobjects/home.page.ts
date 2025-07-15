@@ -34,6 +34,5 @@ export class Home {
         const btnCart = $(element.btnCart);
         await expect(btnCart).toBeDisplayed();
         await btnCart.click();
-        
     };
 };

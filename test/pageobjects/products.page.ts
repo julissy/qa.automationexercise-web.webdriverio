@@ -65,11 +65,12 @@ export class ProductsPage {
     async hoverOverProductAndClick(productIndex: number) {
         const products = await $$(element.listProductsIndex);
         const product = products[productIndex - 1];
-        const btnAddCart = product.$(`//a[@data-product-id='${productIndex}']`);
-
+        const btnAddCart = product.$(`//div[contains(@class,"overlay-content")]/a[@data-product-id='${productIndex}']`);
+        
         await product.scrollIntoView();
         await product.moveTo();
-        await btnAddCart.waitForClickable({ timeout: 5000 });
+
+        await expect(btnAddCart).toBeDisplayed();
         await btnAddCart.click();
            
     };

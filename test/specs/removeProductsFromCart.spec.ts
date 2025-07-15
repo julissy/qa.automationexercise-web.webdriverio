@@ -8,7 +8,7 @@ const cartPage = new CartPage();
 
 describe('Test Case 05: Remove Products From Cart', () => {
 
-    beforeEach(async () => {
+    before(async () => {
         homePage.open('/');
         await homePage.products();
     });
@@ -21,11 +21,18 @@ describe('Test Case 05: Remove Products From Cart', () => {
     });
 
     it('Click "Cart" button', async () => {
-        await homePage.cart()
+        await homePage.cart();
     });
 
     it(' Click "X" button corresponding to particular product', async () => {
         await cartPage.clickDelete(1);
-    })
+    });
+
+    it('Verify that product is removed from the cart', async () => {
+        await cartPage.productIsRemoved(1);
+    });
+
 });
+
+
 
