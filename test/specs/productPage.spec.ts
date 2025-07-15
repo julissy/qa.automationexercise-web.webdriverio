@@ -1,6 +1,6 @@
-import { Home } from '../pageObjects/home.page';
+import { Home } from '../pageobjects/home.page';
 const homePage = new Home();
-import { ProductsPage } from '../pageObjects/products.page';
+import { ProductsPage } from '../pageobjects/products.page';
 const productsPage = new ProductsPage();
 
 

@@ -1,10 +1,10 @@
-import { Home } from '../pageObjects/home.page';
+import { Home } from '../pageobjects/home.page';
 const homePage = new Home();
-import { LoginPage } from '../pageObjects/login.page';
+import { LoginPage } from '../pageobjects/login.page';
 const loginPage = new LoginPage();
-import { RegisterPage } from '../pageObjects/register.page';
+import { RegisterPage } from '../pageobjects/register.page';
 const registerPage = new RegisterPage();
-import { ConfirmationPage } from '../pageObjects/confirmation.page';
+import { ConfirmationPage } from '../pageobjects/confirmation.page';
 const confirmationPage = new ConfirmationPage();
 
 describe('Suite Case: Register Page', () => {
