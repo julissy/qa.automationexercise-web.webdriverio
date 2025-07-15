@@ -1,8 +1,8 @@
-import { Home } from '../pageobjects/home.page';
+import { Home } from '../pageObjects/home.page';
 const homePage = new Home();
-import { ProductsPage } from '../pageobjects/products.page';
+import { ProductsPage } from '../pageObjects/products.page';
 const productsPage = new ProductsPage();
-import { CartPage } from '../pageobjects/cart.page';
+import { CartPage } from '../pageObjects/cart.page';
 const cartPage = new CartPage();
 
 
@@ -15,7 +15,7 @@ describe('Suite Case: Cart Page', () => {
 
     it('Test Case 03: Verify Product quantity in Cart', async () => {
         await productsPage.clickViewProduct();
-        await productsPage.increaseQuantityTo4();
+        await productsPage.increaseQuantity(4);
         await productsPage.clickAddCart();
         await productsPage.clickViewCart();
         await cartPage.verifyProductAndQuantity();

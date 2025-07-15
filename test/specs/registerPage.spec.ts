@@ -1,12 +1,11 @@
-//import { expect } from '@wdio/globals';
-import { Home } from '../pageobjects/home.page';
+import { Home } from '../pageObjects/home.page';
 const homePage = new Home();
-import { LoginPage } from '../pageobjects/login.page';
+import { LoginPage } from '../pageObjects/login.page';
 const loginPage = new LoginPage();
-import { RegisterPage } from '../pageobjects/register.page';
+import { RegisterPage } from '../pageObjects/register.page';
 const registerPage = new RegisterPage();
-import { ConfirmationPage } from '../pageobjects/confirmation.page';
-const confirmationPage = new ConfirmationPage()
+import { ConfirmationPage } from '../pageObjects/confirmation.page';
+const confirmationPage = new ConfirmationPage();
 
 describe('Suite Case: Register Page', () => {
 

@@ -40,11 +40,11 @@ export class ProductsPage {
         
     }
 
-    async increaseQuantityTo4() {
+    async increaseQuantity(quantityValue : number) {
        const inputQuantity = $(element.inputQuantity);
        await inputQuantity.clearValue();
-       await inputQuantity.setValue('4');
-       await expect(inputQuantity).toHaveValue('4');
+       await inputQuantity.setValue(quantityValue);
+       await expect(inputQuantity).toHaveValue(quantityValue.toString());
        
     };
 
