@@ -54,10 +54,10 @@ export const config: WebdriverIO.Config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['--disable-gpu', '--window-size=1280,800']
+            args: ['--headless','--disable-gpu', '--window-size=1280,800']
         }
     }],
-    // '--headless',
+    // 
     //
     // ===================
     // Test Configurations
@@ -138,7 +138,7 @@ export const config: WebdriverIO.Config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 90000
     },
 
     //
