@@ -62,18 +62,18 @@ Abaixo está um desenho exemplificando a estrutura básica do projeto:
 qa.automationexercise-web.webdriverio/
 │
 ├── tests/                # Testes automatizados
-│   ├── cadastro.spec.js
-│   └── login.spec.js
+│   ├── cadastro.spec.ts
+│   └── login.spec.ts
 │
-├── pageobjects/          # Page Objects para organização dos elementos e ações das páginas
-│   ├── CadastroPage.js
-│   └── LoginPage.js
+├── pageObjects/          # Page Objects para organização dos elementos e ações das páginas
+│   ├── CadastroPage.ts
+│   └── LoginPage.ts
 │
 ├── elements/             # Elementos reutilizáveis ou mapeamentos de seletores
-│   ├── cadastro.elements.js
-│   └── login.elements.js
+│   ├── cadastro.elements.ts
+│   └── login.elements.ts
 │
-├── wdio.conf.js          # Arquivo de configuração do WebdriverIO
+├── wdio.conf.ts          # Arquivo de configuração do WebdriverIO
 ├── package.json          # Gerenciador de dependências e scripts do projeto
 ├── allure-results/       # Resultados dos testes para geração do relatório Allure
 └── README.md             # Documentação do projeto
@@ -90,7 +90,7 @@ npm run wdio
 Ou para rodar um conjunto específico de testes:
 
 ```bash
-npx wdio run wdio.conf.js --spec ./caminho/do/arquivo.spec.js
+npx wdio run wdio.conf.ts --spec ./caminho/do/arquivo.spec.ts
 ```
 
 ## Relatórios
